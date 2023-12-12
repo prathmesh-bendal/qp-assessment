@@ -1,15 +1,26 @@
 package com.pbendal.gms.repository;
 
-import org.springframework.data.jpa.repository.JpaRepository;
+
+
+
+import java.util.List;
+
 import org.springframework.stereotype.Repository;
 
 import com.pbendal.gms.model.Product;
 
 
 
-
 @Repository
-public interface ProductRepository extends JpaRepository<Product, String> {
+public interface ProductRepository  {
+	
+	 Product save(Product p);
+	 
+	 List<Product> findAll();
+	 
+	 Product findById(String id);
+	 
+	 boolean deleteById(String id);
 	
 	 
 	

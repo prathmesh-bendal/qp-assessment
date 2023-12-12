@@ -10,7 +10,7 @@ import com.pbendal.gms.beans.Order;
 import com.pbendal.gms.beans.Receipt;
 import com.pbendal.gms.model.Product;
 
-import jakarta.persistence.EntityManager;
+
 
 
 @Service

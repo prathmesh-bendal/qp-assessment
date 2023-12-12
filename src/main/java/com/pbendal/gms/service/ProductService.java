@@ -10,8 +10,7 @@ import org.springframework.stereotype.Service;
 import com.pbendal.gms.model.Product;
 import com.pbendal.gms.repository.ProductRepository;
 
-import jakarta.persistence.EntityManager;
-import jakarta.persistence.PersistenceContext;
+
 
 @Service
 public class ProductService {
@@ -58,11 +57,8 @@ public class ProductService {
 	
 	public Product getProduct(String id)
 	{
-		Optional<Product> product=productRepository.findById(id);
-		if(product.isPresent())
-			return product.get();
-		
-		return null;
+		Product product=productRepository.findById(id);
+		return product;
 	}
 	
 	public String updateProduct(Product product)
